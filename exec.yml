@@ -46,5 +46,5 @@
       state: present
   - name: install tomcat
     apt:
-      name: tomcat
+      name: tomcat10
       state: present
