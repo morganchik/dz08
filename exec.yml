@@ -23,8 +23,9 @@
     command: git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
   - name: remove fucking pom.xml
-    file: /home/morg/boxfuse-sample-java-war-hello/pom.xml
-    state: absent
+    file:
+      path: /home/morg/boxfuse-sample-java-war-hello/pom.xml
+      state: absent
 
   # - name: copy fucking pom.xml
   #   copy:
