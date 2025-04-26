@@ -35,22 +35,27 @@
   # - name: mvn package
   #   command: mvn -f /home/morg/boxfuse-sample-java-war-hello/ package
 
-  - name: copy *.war
-    fetch:
-      src: /home/morg/boxfuse-sample-java-war-hello/target/hello-1.0.war
-      dest: /home/morg/dz08/
-      flat: yes
+  # - name: copy *.war
+  #   fetch:
+  #     src: /home/morg/boxfuse-sample-java-war-hello/target/hello-1.0.war
+  #     dest: /home/morg/dz08/
+  #     flat: yes
 
-# - name: install on web server
-#   hosts: web
-#   become: yes
+- name: install on web server
+  hosts: web
+  become: yes
 
-#   tasks:
-#   - name: install java
-#     apt:
-#       name: default-jdk
-#       state: present
-#   - name: install tomcat
-#     apt:
-#       name: tomcat10
-#       state: present
+  tasks:
+  # - name: install java
+  #   apt:
+  #     name: default-jdk
+  #     state: present
+  # - name: install tomcat
+  #   apt:
+  #     name: tomcat10
+  #     state: present
+
+  - name: copy *.war to tomcat web folder
+    copy:
+      src: /home/morg/dz08/hello-1.0.war
+      dest: /var/lib/tomcat10/webapps/
