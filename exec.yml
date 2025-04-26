@@ -16,7 +16,6 @@
 
   - name: clone git
     command: git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-    #state: present
 
   - name: mvn package
     command: mvn -f /boxfuse-sample-java-war-hello package
