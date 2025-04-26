@@ -44,3 +44,7 @@
     apt:
       name: default-jdk
       state: present
+  - name: install tomcat
+    apt:
+      name: tomcat
+      state: present
