@@ -1,6 +1,6 @@
 ---
 - name: fucking joke
-  hosts: localhost
+  hosts: mvn
   become: yes
 
   tasks:
@@ -8,4 +8,3 @@
     copy:
       src: /home/morg/dz08/1.lol
       dest: /home/morg/
-    delegate_to: mvn
