@@ -4,40 +4,40 @@
   become: yes
 
   tasks:
-  - name: install maven
-    apt:
-      name: maven
-      state: present
+  # - name: install maven
+  #   apt:
+  #     name: maven
+  #     state: present
     
-  - name: install git
-    apt:
-      name: git
-      state: present
+  # - name: install git
+  #   apt:
+  #     name: git
+  #     state: present
 
-  - name: remove old git clone
-    file:
-      path: /home/morg/boxfuse-sample-java-war-hello
-      state: absent
+  # - name: remove old git clone
+  #   file:
+  #     path: /home/morg/boxfuse-sample-java-war-hello
+  #     state: absent
 
-  - name: clone git
-    command: git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+  # - name: clone git
+  #   command: git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
-  - name: remove fucking pom.xml
-    file:
-      path: /home/morg/boxfuse-sample-java-war-hello/pom.xml
-      state: absent
+  # - name: remove fucking pom.xml
+  #   file:
+  #     path: /home/morg/boxfuse-sample-java-war-hello/pom.xml
+  #     state: absent
 
-  - name: copy fucking pom.xml
-    copy:
-      src: /home/morg/dz08/pom.xml
-      dest: /home/morg/boxfuse-sample-java-war-hello/
+  # - name: copy fucking pom.xml
+  #   copy:
+  #     src: /home/morg/dz08/pom.xml
+  #     dest: /home/morg/boxfuse-sample-java-war-hello/
 
-  - name: mvn package
-    command: mvn -f /home/morg/boxfuse-sample-java-war-hello/ package
+  # - name: mvn package
+  #   command: mvn -f /home/morg/boxfuse-sample-java-war-hello/ package
 
   - name: copy *.war
     fetch:
-      src: home/morg/boxfuse-sample-java-war-hello/target/hello-1.0.war
+      src: /home/morg/boxfuse-sample-java-war-hello/target/hello-1.0.war
       dest: /home/morg/dz08/
       flat: yes
 
