@@ -28,4 +28,4 @@
       dest: /home/morg/boxfuse-sample-java-war-hello/
 
   - name: mvn package
-    command: mvn -f /boxfuse-sample-java-war-hello package
+    command: mvn -f /boxfuse-sample-java-war-hello/ package
