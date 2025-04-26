@@ -1,5 +1,5 @@
 ---
-- name: install on web server
+- name: install on mvn server
   hosts: mvn
   become: yes
 
@@ -34,3 +34,13 @@
 
   - name: mvn package
     command: mvn -f /home/morg/boxfuse-sample-java-war-hello/ package
+
+- name: install on web server
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: install java
+    apt:
+      name: default-jdk
+      state: present
