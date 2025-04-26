@@ -22,5 +22,13 @@
   - name: clone git
     command: git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
+#  - name: copy fucking pom.xml
+#    copy:
+#      src: /home/morg/boxfuse-sample-java-war-hello
+#      dest:
+
+
   - name: mvn package
     command: mvn -f /boxfuse-sample-java-war-hello package
+
+- name: copy fucking pom.xml
