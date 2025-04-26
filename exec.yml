@@ -24,11 +24,9 @@
 
   - name: copy fucking pom.xml
     copy:
-      src: /home/morg/pom.xml
-      dest: /home/morg/
+      src: /home/morg/dz08/pom.xml
+      dest: /home/morg/boxfuse-sample-java-war-hello package/
 
 
-  - name: mvn package
-    command: mvn -f /boxfuse-sample-java-war-hello package
-
-- name: copy fucking pom.xml
+#  - name: mvn package
+#    command: mvn -f /boxfuse-sample-java-war-hello package
