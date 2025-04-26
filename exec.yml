@@ -27,10 +27,10 @@
       path: /home/morg/boxfuse-sample-java-war-hello/pom.xml
       state: absent
 
-  # - name: copy fucking pom.xml
-  #   copy:
-  #     src: /home/morg/dz08/pom.xml
-  #     dest: /home/morg/boxfuse-sample-java-war-hello/
+  - name: copy fucking pom.xml
+    copy:
+      src: /home/morg/dz08/pom.xml
+      dest: /home/morg/boxfuse-sample-java-war-hello/
 
   # - name: mvn package
   #   command: mvn -f /boxfuse-sample-java-war-hello/ package
