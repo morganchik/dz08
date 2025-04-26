@@ -32,5 +32,5 @@
       src: /home/morg/dz08/pom.xml
       dest: /home/morg/boxfuse-sample-java-war-hello/
 
-  # - name: mvn package
-  #   command: mvn -f /boxfuse-sample-java-war-hello/ package
+  - name: mvn package
+    command: mvn -f /home/morg/boxfuse-sample-java-war-hello/ package
