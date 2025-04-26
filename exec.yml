@@ -24,7 +24,7 @@
 
   - name: remove fucking pom.xml
     file:
-      path: /home/morg/boxfuse-sample-java-war-hello/pom.xml
+      src: /home/morg/boxfuse-sample-java-war-hello/pom.xml
       state: absent
 
   # - name: copy fucking pom.xml
