@@ -23,4 +23,4 @@
     command: git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
   - name: mvn package
-    command: mvn -f /boxfuse-sample-java-war-hello package
+    command: mvn -f /home/morg/boxfuse-sample-java-war-hello package
