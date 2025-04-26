@@ -6,5 +6,5 @@
   tasks:
   - name: copy fucking pom.xml
     copy:
-      src: /home/morg/pom.xml
+      src: /home/morg/dz08/pom.xml
       dest: /home/morg/
