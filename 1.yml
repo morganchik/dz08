@@ -4,7 +4,7 @@
   become: yes
 
   tasks:
-  - name: copy
+  - name: copy fucking pom.xml
     copy:
-      src: /home/morg/dz08/1.lol
+      src: /home/morg/pom.xml
       dest: /home/morg/
